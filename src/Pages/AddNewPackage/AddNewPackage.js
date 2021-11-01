@@ -11,7 +11,7 @@ const AddNewPackage = () => {
 
     const addOfferPackage = () => {
         const newOfferPackage = {name, cost, duration, picture, district};
-        fetch('http://localhost:5000/packages',{
+        fetch('https://bloodcurdling-chupacabra-21156.herokuapp.com/packages',{
             method:"POST",
             headers: {
                 "content-type": "application/json"

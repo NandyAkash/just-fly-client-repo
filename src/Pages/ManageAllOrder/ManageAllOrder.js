@@ -5,7 +5,7 @@ import SingleOrder from '../SingleOrder/SingleOrder';
 const ManageAllOrder = () => {
     const [orders,setOrders] = useState();
     useEffect(()=> {
-        fetch('http://localhost:5000/manageorder')
+        fetch('https://bloodcurdling-chupacabra-21156.herokuapp.com/manageorder')
         .then(res => res.json())
         .then(data => setOrders(data))
     })

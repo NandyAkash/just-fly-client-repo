@@ -7,7 +7,7 @@ const SingleOrder = (props) => {
     const handleOrder = id => {
         const confirmDelete = window.confirm('Are you sure to delete it?');
         if(confirmDelete) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://bloodcurdling-chupacabra-21156.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

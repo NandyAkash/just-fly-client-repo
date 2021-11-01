@@ -27,7 +27,7 @@ const SinglePackage = () => {
             const selectedPackage = name;
             const packagePrice = cost;
             const orderPackage = {userId, userName, userEmail, userAddress, userNumber, selectedPackageId, selectedPackage, packagePrice};
-            fetch('http://localhost:5000/orders',{
+            fetch('https://bloodcurdling-chupacabra-21156.herokuapp.com/orders',{
                 method:"POST",
                 headers: {
                     "content-type": "application/json"

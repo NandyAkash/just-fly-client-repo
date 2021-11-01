@@ -20,7 +20,7 @@ const Login = () => {
             const email = result.user.email ;
             const newUser = {id, name, email};
             
-            fetch('http://localhost:5000/users',{
+            fetch('https://bloodcurdling-chupacabra-21156.herokuapp.com//users',{
                 method:"POST",
                 headers: {
                     "content-type": "application/json"

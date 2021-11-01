@@ -8,7 +8,7 @@ const Orders = () => {
     const {uid} = user;
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${uid}`)
+        fetch(`https://bloodcurdling-chupacabra-21156.herokuapp.com/orders/${uid}`)
         .then(res => res.json())
         .then(data => setOrders(data))
     },[orders])
