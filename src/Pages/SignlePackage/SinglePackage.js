@@ -16,7 +16,7 @@ const SinglePackage = () => {
         .then(res=>res.json())
         .then(data => setSinglePackage(data))
     },[])
-    const {name, picture, duration, cost} = singlePackage;
+    const {name, picture, duration, cost, description} = singlePackage;
     const placeOrder = () =>{
             const userId = user.uid;
             const userName = user.displayName;
@@ -46,7 +46,8 @@ const SinglePackage = () => {
            <div>
            <Image src={picture} />
            <h1>{name}</h1>
-           <p>{duration} days</p>
+           <p style={{padding:"20px"}}>{description}</p>
+           <p>Tour Duration{duration} days</p>
            <p>{cost} Tk</p>
            </div>
            <Form>

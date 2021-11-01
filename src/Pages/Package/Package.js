@@ -14,7 +14,7 @@ const Package = (props) => {
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
-                    Duration: {duration} days
+                    Tour Duration: {duration} days
                     </Card.Text>
                     <Card.Text>
                     Cost: {cost} Tk
