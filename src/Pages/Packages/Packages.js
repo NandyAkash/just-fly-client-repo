@@ -4,13 +4,11 @@ import Package from '../Package/Package';
 import './Packages.css';
 const Packages = () => {
     const [packages, setPackages] = useState([]);
-
-
     useEffect(() => {
         fetch('https://bloodcurdling-chupacabra-21156.herokuapp.com/packages')
         .then(res=>res.json())
         .then(data => setPackages(data))
-    },[])
+    })
 
     return (
         <div>

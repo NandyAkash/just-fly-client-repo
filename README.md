@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# JUST FLY
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Chech The Project here [Just Fly](https://just-fly-9b8d3.web.app/).
 
-## Available Scripts
+## Please See the requirements It is important
 
-In the project directory, you can run:
+Admin email is set in Header.js and you can change the role there as the site has two roles one is User and other is Admin
 
 ### `npm start`
 

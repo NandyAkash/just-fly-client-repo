@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './contexts/AuthProvider';
+import AddNewPackage from './Pages/AddNewPackage/AddNewPackage';
 import Footer from './Pages/Footer/Footer';
 import Header from './Pages/Header/Header';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import ManageAllOrder from './Pages/ManageAllOrder/ManageAllOrder';
 import Orders from './Pages/Orders/Orders';
 import Packages from './Pages/Packages/Packages';
 import SinglePackage from './Pages/SignlePackage/SinglePackage';
@@ -29,9 +31,15 @@ function App() {
             <Route path='/login'>
               <Login></Login>
             </Route>
-            <Route path='/orders'>
+            <PrivateRoute path='/orders'>
               <Orders></Orders>
-            </Route>
+            </PrivateRoute>
+            <PrivateRoute path='/manageorder'>
+              <ManageAllOrder></ManageAllOrder>
+            </PrivateRoute>
+            <PrivateRoute path='/addpackage'>
+              <AddNewPackage></AddNewPackage>
+            </PrivateRoute>
             <PrivateRoute path='/packages/:id'>
               <SinglePackage></SinglePackage>
             </PrivateRoute>

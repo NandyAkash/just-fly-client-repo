@@ -1,11 +1,10 @@
 import { Button } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../../Hooks/useAuth';
-import AddUser from '../../AddUser';
 
 
 const Login = () => {
-    const { signInGoogle,user } = useAuth();
+    const { signInGoogle } = useAuth();
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from?.pathname || '/home';
@@ -15,9 +14,25 @@ const Login = () => {
         
         .then(result => {
             history.push(redirect_uri);
+            console.log(result.user.displayName);
+            const id = result.user.uid;
+            const name = result.user.displayName;
+            const email = result.user.email ;
+            const newUser = {id, name, email};
+            
+            fetch('http://localhost:5000/users',{
+                method:"POST",
+                headers: {
+                    "content-type": "application/json"
+                },
+                body: JSON.stringify(newUser)
+            })
+            .then(res=> res.json())
+            .catch(err => console.log(err))
         })
         
     }
+    
     
    
     return (
@@ -26,11 +41,6 @@ const Login = () => {
             <h2>Please Login with Google</h2>
             
             </div>
-            {
-                    user?.email?
-                    <AddUser />:
-                    console.log('added')
-            }
             <div className='buttons mt-3'>
                 <Button onClick={handleGoogleLogin}>Google SignIn</Button>
             </div> 

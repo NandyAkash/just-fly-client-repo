@@ -6,7 +6,6 @@ import './Package.css';
 
 const Package = (props) => {
     const {picture,name,_id, duration, cost} = props.data;
-
     
     return (
         <div className="package-container">
@@ -21,7 +20,7 @@ const Package = (props) => {
                     Cost: {cost} Tk
                     </Card.Text>
                     <Link to={`/packages/${_id}`}>
-                        <Button  variant="primary">Get the Offer</Button>
+                    <Button variant="primary">Get the Offer</Button>
                     </Link>
                 </Card.Body>
             </Card>

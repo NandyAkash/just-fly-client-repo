@@ -16,23 +16,7 @@ const useFirebase = () => {
             
             .finally(()=> setisLoading(false));
     }
-//     const handleUserRegistration= (email, password) => {
-//         createUserWithEmailAndPassword(auth, email,password)
-//         .then((result) => {
-//             const user = result.user;
-//             console.log(user);
-//         })
-//     }
-    
-//    const handleUserLogin= (email, password) => {
-//         setisLoading(true);
-//         signInWithEmailAndPassword(auth, email,password)
-//         .then((result) => {
-//             setUser(result.user);
-//         })
-//         .finally(() => setisLoading(false))
-//    }
-    
+
     //User state Change
     useEffect(()=>{
         const unsubscribed = onAuthStateChanged(auth, user => {
@@ -58,9 +42,7 @@ const useFirebase = () => {
         user,
         isLoading,
         signInGoogle,
-        logOut,
-        // handleUserRegistration,
-        // handleUserLogin
+        logOut
     }
 };
 
