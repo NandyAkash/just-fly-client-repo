@@ -12,6 +12,6 @@ Admin email is set in Header.js and you can change the role there as the site ha
 
 ### User can check there orders and can also cancel the order they want to cancel.
 
-### There is two roles. One for All Users and another for ADMIN ( which is set as email nandyak81@gmail.com in Header.js. It can be changed just put your mail there to check some other options )
+### There is two roles. One for All Users and another for ADMIN
 
 ### Some of this sites option like ( Add an extra Offer Package, View all Users orders and Cancel them ) is only visible when logged in as ADMIN
