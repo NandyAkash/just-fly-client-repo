@@ -6,9 +6,9 @@ Check The Project here [Just Fly](https://just-fly-9b8d3.web.app/).
 
 Admin email is set in Header.js and you can change the role there as the site has two roles one is User and other is Admin.
 
-### Just fly is a tour site booking site ehre various places in Bangladesh can be visited.
+### Just fly is a tour site booking site where various places in Bangladesh can be visited.
 
-### In this site a user can see various kind of offers.
+### On this site, a user can see various kind of offers.
 
 ### User can check there orders and can also cancel the order they want to cancel.
 
